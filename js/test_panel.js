@@ -66,9 +66,9 @@ function tile_down() {
 }
 
 function preload () {
-	game.load.image('right_panel1','assets/toolbar.png');
-	game.load.image("tileset1",'assets/tileset.png');
-	game.load.image("units",'assets/units.png')
+	game.load.image('right_panel1','/static/assets/toolbar.png');
+	game.load.image("tileset1",'/static/assets/tileset.png');
+	game.load.image("units",'/static/assets/units.png')
 	var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
 	game.add.text(0,100,"loading",style);
 	//game.load.image('logo', 'phaser.png');
