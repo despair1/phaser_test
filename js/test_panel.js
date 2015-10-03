@@ -69,6 +69,8 @@ function preload () {
 	game.load.image('right_panel1','/static/assets/toolbar.png');
 	game.load.image("tileset1",'/static/assets/tileset.png');
 	game.load.image("units",'/static/assets/units.png')
+	game.load.spritesheet("buttons","/static/assets/Buttons.png",64,32)
+	//game.load.json("test1",host+"test.json",true)
 	var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
 	game.add.text(0,100,"loading",style);
 	//game.load.image('logo', 'phaser.png');
@@ -79,12 +81,13 @@ function create () {
 	game.stage.backgroundColor="#2d2d2d";
 	//var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
 	//game.add.text(0,0,"hello  quiters",style);
-	this.right_panel1=game.add.sprite(game.width-8*tile_size,0,'right_panel1');
+	this.right_panel1=create_right_panel();
+		//game.add.sprite(game.width-8*tile_size,0,'right_panel1');
 	//this.right_panel1=game.add.sprite(256,0,'right_panel1');
-	this.right_panel1.fixedToCamera=true;
-	var r = this.right_panel1;
-	r.inputEnabled=true;
-	r.events.onInputDown.add(next_unit,this);
+	//this.right_panel1.fixedToCamera=true;
+	//var r = this.right_panel1;
+	//r.inputEnabled=true;
+	//r.events.onInputDown.add(next_unit,this);
 	//game.camera.x=0;
 	//this.right_panel1.cameraOffset.setTo(0,0);
 	
