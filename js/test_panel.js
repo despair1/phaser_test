@@ -70,6 +70,7 @@ function preload () {
 	game.load.image("tileset1",'/static/assets/tileset.png');
 	game.load.image("units",'/static/assets/units.png')
 	game.load.spritesheet("buttons","/static/assets/Buttons.png",64,32)
+	game.load.json('map_layer1','/static/assets/map_layer1',true)
 	//game.load.json("test1",host+"test.json",true)
 	var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
 	game.add.text(0,100,"loading",style);
@@ -79,6 +80,7 @@ function preload () {
 
 function create () {
 	game.stage.backgroundColor="#2d2d2d";
+	
 	//var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
 	//game.add.text(0,0,"hello  quiters",style);
 	this.right_panel1=create_right_panel();
@@ -90,7 +92,9 @@ function create () {
 	//r.events.onInputDown.add(next_unit,this);
 	//game.camera.x=0;
 	//this.right_panel1.cameraOffset.setTo(0,0);
-	
+	add_map()
+	console.log("adding map")
+	/*
 	map=game.add.tilemap();
 	map.addTilesetImage('tileset1',null,32,32,0,0,0);
 	map.addTilesetImage('units',null,32,32,0,0,4);
@@ -99,10 +103,7 @@ function create () {
 	layer.resizeWorld();
 	layer.inputEnabled=true;
 	layer.events.onInputDown.add(tile_down,this);
-	/*map.putTile(0,layer.getTileX(1),layer.getTileY(1),layer);
-	map.putTile(1,2,0,layer);
-	map.putTile(2,4,0,layer);
-	map.putTile(3,0,2,layer); */
+	
 	for ( ix=0; ix<40; ix++) {
 		for ( iy=0; iy<30; iy++) {
 			map.putTile(game.rnd.integerInRange(0,2),ix,iy,layer);
@@ -118,7 +119,7 @@ function create () {
 		map.putTile(units[i].tile,units[i].x,units[i].y,layer_units);
 		console.log(units[i]);
 	};
-	//map.putTile(5,2,0,layer_units);
+	//map.putTile(5,2,0,layer_units); */
 	this.right_panel1.bringToTop();
 	cursors = game.input.keyboard.createCursorKeys();
 	
