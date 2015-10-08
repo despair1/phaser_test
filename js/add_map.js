@@ -12,6 +12,7 @@ function add_map(){
 	layer.resizeWorld();
 	layer.inputEnabled=true;
 	layer.events.onInputDown.add(tile_down,this);
+	this.layer=layer
 	var js1=game.cache.getJSON('map_layer1')
 	for (x in js1.map_layer1) {
 		for ( y in js1.map_layer1[x])
