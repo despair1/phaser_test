@@ -5,7 +5,7 @@ var host ="http://127.0.0.1:8000/game/"
 	
 right_panel_buttons = {
 		net:0,
-		untis:1,
+		units:1,
 		del:2,
 		add_unit:3,
 		next_unit:4
