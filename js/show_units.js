@@ -29,6 +29,13 @@ function onUnitsComplete() {
 	var pj=game.cache.getJSON("units_json");
 	var max=pj.max
 	var yofs=(tile_size-2*units_yofs-units_min_ofset)/max
+	console.log("lalala "+unit_graphics)
+	if ( unit_graphics ) {
+		
+	
+		unit_graphics.destroy()
+		console.log("lala "+unit_graphics)
+	}
 	unit_graphics=game.add.graphics(0,0)
 	unit_graphics.beginFill(units_own_color)
 	for (i in pj.own){

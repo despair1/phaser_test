@@ -44,7 +44,8 @@ function create_right_panel() {
 	s.events.onInputDown.add(onAddUnits,this);
 	r.addChild(s);
 	
-	s=game.make.sprite(80,60,'buttons',4);
+	s=game.make.sprite(80,60,'buttons',
+			right_panel_buttons.next_unit);
 	s.inputEnabled=true;
 	s.input.priorityID = 1;
 	s.events.onInputDown.add(onNetDown,this);
