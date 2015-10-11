@@ -48,7 +48,7 @@ function create_right_panel() {
 			right_panel_buttons.next_unit);
 	s.inputEnabled=true;
 	s.input.priorityID = 1;
-	s.events.onInputDown.add(onNetDown,this);
+	s.events.onInputDown.add(nextUnit,this);
 	r.addChild(s);
 	return r;
 	

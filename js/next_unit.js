@@ -2,7 +2,7 @@
  * 
  */
 
-var unit_cursor = null
+var unit_cursor = 0
 
 
 function onAddUnits() {
@@ -23,4 +23,13 @@ function addUnitbyTileDown() {
 	    async: true,
 	    success: function () {}
 	});
+}
+
+function nextUnit() {
+	unit_cursor++
+	if ( own_units_pos ) {
+		if (unit_cursor>=own_units_pos.length) { unit_cursor=0}
+		marker.x = own_units_pos[unit_cursor][1] * tile_size;
+		marker.y = own_units_pos[unit_cursor][2] * tile_size;
+	}
 }

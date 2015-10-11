@@ -8,6 +8,7 @@ var units_xofs=5
 var units_yofs=5
 var units_width=3
 var units_min_ofset=7
+var own_units_pos
 function draw_poly () {
 	poly = new Phaser.Polygon(100,200,103,200,103,400,100,400)
 	unit_graphics=game.add.graphics(0,0)
@@ -28,13 +29,14 @@ function onLoadUnits() {
 function onUnitsComplete() {
 	var pj=game.cache.getJSON("units_json");
 	var max=pj.max
+	own_units_pos=pj.own_units_pos
 	var yofs=(tile_size-2*units_yofs-units_min_ofset)/max
-	console.log("lalala "+unit_graphics)
+	//console.log("lalala "+unit_graphics)
 	if ( unit_graphics ) {
 		
 	
 		unit_graphics.destroy()
-		console.log("lala "+unit_graphics)
+		//console.log("lala "+unit_graphics)
 	}
 	unit_graphics=game.add.graphics(0,0)
 	unit_graphics.beginFill(units_own_color)
