@@ -15,6 +15,7 @@ var current_unit=0;
 var cursors;
 var marker;
 var unit_selected=false;
+var ws_host='ws://127.0.0.1:8000/ws/'
 
 function next_unit() {
 	current_unit++;
@@ -129,7 +130,12 @@ function create () {
     marker.drawRect(0, 0, 32, 32);
 	//var logo = game.add.sprite(game.world.centerX+200, game.world.centerY, 'logo');
 	//logo.anchor.setTo(0.5, 0.5);
-
+    
+    var ws4redis = WS4Redis({
+		uri: ws_host+'units_updated?subscribe-user',
+		receive_message: onUnitsUpdated,
+		//heartbeat_msg: {{ WS4REDIS_HEARTBEAT }}
+	}); 
 }
 
 

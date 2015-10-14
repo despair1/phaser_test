@@ -66,3 +66,7 @@ function onUnitsComplete() {
 function del_poly() {
 	unit_graphics.destroy()
 }
+
+function onUnitsUpdated(msg) {
+	console.log(msg)
+}
