@@ -47,7 +47,7 @@ function moveUnitbyTileDown() {
 	    contentType: 'application/json; charset=utf-8',
 	    dataType: 'json',
 	    async: true,
-	    success: function () {}
+	    success: function () {onLoadUnits()}
 	});
 	this.layer.events.onInputDown.removeAll(this)
 }

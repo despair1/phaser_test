@@ -69,4 +69,5 @@ function del_poly() {
 
 function onUnitsUpdated(msg) {
 	console.log(msg)
+	onLoadUnits()
 }
