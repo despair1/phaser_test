@@ -27,6 +27,14 @@ function csrfSafeMethod(method) {
 }
 
 window.onload = function () {
+	host=window.location.href
+	var re=/http:\/\/.*game/g 
+	var s =re.exec(host)
+	//s=s.substring(4,s.length-4)
+	var t=host.match(/http(:\/\/.*)game/)
+	var ws="ws"+t[1]+"ws/"
+	console.log("La3 "+ws)
+	ws_host=ws
 	var csrftoken = getCookie('csrftoken');
 	$.ajaxSetup({
 	    beforeSend: function(xhr, settings) {

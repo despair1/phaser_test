@@ -68,7 +68,8 @@ function tile_down() {
 
 function preload () {
 	game.load.image('right_panel1','/static/assets/toolbar.png');
-	game.load.image("tileset1",'/static/assets/tileset.png');
+	//game.load.image("tileset1",'/static/assets/tileset.png');
+	game.load.image("tileset1",'/static/assets/gekko_tileset.png');
 	game.load.image("units",'/static/assets/units.png')
 	game.load.spritesheet("buttons","/static/assets/Buttons.png",64,32)
 	game.load.json('map_layer1','/static/assets/map_layer1',true)

@@ -20,6 +20,7 @@ function draw_poly () {
 
 function onLoadUnits() {
 	console.log("loading units");
+	console.log("host name  "+window.location.href)
 	game.load.json("units_json",host+"units.json",true)
 	game.load.start();
 	game.load.onLoadComplete.add(onUnitsComplete,this)
