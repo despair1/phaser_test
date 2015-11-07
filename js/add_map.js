@@ -2,14 +2,17 @@
  * 
  */
 units_tile_offset=8
-
+sword_tile_offset=16
+layer_sword=null
 function add_map(){
 	
 	map=game.add.tilemap();
 	map.addTilesetImage('tileset1',null,32,32,0,0,0);
 	//map.addTilesetImage('units',null,32,32,0,0,units_tile_offset);
+	map.addTilesetImage('sword_tileset',null,32,32,0,0,sword_tile_offset);
 	layer=map.create("level1",40,30,32,32);
 	//layer_units=map.createBlankLayer("units",40,30,32,32);
+	layer_sword=map.createBlankLayer("sword",40,30,32,32);
 	layer.resizeWorld();
 	layer.inputEnabled=true;
 	//layer.events.onInputDown.add(tile_down,this);
